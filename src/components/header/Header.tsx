@@ -3,10 +3,10 @@ import styles from './Header.module.scss'
 function Header() {
   return (
     <header className={styles.base}>
-      <Link to={'/map'}>Map</Link>
+      <Link to={'/geodata-explorer/map'}>Map</Link>
       <div>
-        <Link to={'/login'}>Log in</Link>
-        <Link to={'/signup'}>Sign up</Link>
+        <Link to={'/geodata-explorer/login'}>Log in</Link>
+        <Link to={'/geodata-explorer/signup'}>Sign up</Link>
       </div>
     </header>
   )

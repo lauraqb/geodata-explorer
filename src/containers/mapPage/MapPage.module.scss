@@ -1,17 +1,25 @@
 .base {
-  height: '100vh';
-  width: '100%';
+  margin: 50px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  button {
+    background-color: rgb(174, 174, 255);
+  }
+  .countryInput {
+    width: 300px;
+  }
   .eventsList {
     margin: 5px 30px;
     display: flex;
     flex-wrap: wrap;
     font-size: 11px;
     .event {
-      flex: auto;
       padding: 5px;
-      width: 120px;
-      border: 1px solid rgb(193, 193, 193);
-      border-radius: 3px;
+      width: 300px;
+      // border: 1px solid rgb(193, 193, 193);
+      // border-radius: 3px;
     }
   }
 }
