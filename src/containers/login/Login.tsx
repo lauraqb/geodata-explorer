@@ -22,7 +22,8 @@ function Login() {
       [event.target.name]: event.target.value,
     })
   }
-  const submit = () => {
+  const submit = (e: any) => {
+    e.preventDefault()
     const storedEmail = localStorage.getItem('email')
     const storedPassword = localStorage.getItem('password')
     if (data.email === storedEmail && data.password === storedPassword) setLoggedIn(true)
@@ -51,7 +52,7 @@ function Login() {
             value={data.password}
             type='password'
           />
-          <button onClick={submit}>Log in</button>
+          <button onClick={(event) => submit(event)}>Log in</button>
           <div>
             You don't have an account?
             <Link to='/geodata-explorer/signup'>Sign up</Link>

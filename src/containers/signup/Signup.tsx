@@ -1,12 +1,14 @@
 import {useState} from 'react'
 import FormInput from '../../components/formInput/FormInput'
 import styles from './Signup.module.scss'
+import {useNavigate} from 'react-router-dom'
 
 export type LoginFormType = {
   email: string
   password: string
 }
 function Signup() {
+  const history = useNavigate()
   const [data, setData] = useState<LoginFormType>({
     email: '',
     password: '',
@@ -19,9 +21,12 @@ function Signup() {
     })
   }
 
-  const storeUserData = () => {
+  const storeUserData = (e: any) => {
+    debugger
+    e.preventDefault()
     localStorage.setItem('email', data.email)
     localStorage.setItem('password', data.password)
+    history(`/geodata-explorer/`)
   }
 
   return (
@@ -36,7 +41,7 @@ function Signup() {
           value={data.password}
           type='password'
         />
-        <button onClick={storeUserData}>Sign up</button>
+        <button onClick={(event) => storeUserData(event)}>Sign up</button>
       </form>
     </div>
   )
