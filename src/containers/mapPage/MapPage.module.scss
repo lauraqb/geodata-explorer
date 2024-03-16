@@ -1,0 +1,17 @@
+.base {
+  height: '100vh';
+  width: '100%';
+  .eventsList {
+    margin: 5px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 11px;
+    .event {
+      flex: auto;
+      padding: 5px;
+      width: 120px;
+      border: 1px solid rgb(193, 193, 193);
+      border-radius: 3px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.base {
+  height: 40px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+
+  a {
+    margin-right: 20px;
+  }
+}
