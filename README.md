@@ -2,25 +2,17 @@
 
 ## Requirements:
 
-- User Signup and Login (dummy)
-- API Integration: Ticketmaster
+- User Signup and Login (dummy): After signup, it sotres the data in localstorage. This is used to validate the login. If I had more time I would have set email validation, password requirements, and also I would have granted permissions to see the rest of the website if loggedIn is true.
+- API Integration: Ticketmaster. Given a country code, the api endpoint give a list of events along with the latitude and longitude.
 - Map Integration: Google Maps API
-- Design and Usability: You can decide the details of UI/UX, e.g., the colour
-  palette, shapes, radius, fonts, layout, but the application should be easy to use
-  and visually pleasant.
-- (Bonus) User Interaction: Implement at least one feature that enhances user
-  interaction with the map, such as filtering data points, searching for specific
-  criteria, or updating data in real-time.
+- Design and Usability: If I had more time I would have work in the styles, and I would have improved the usability for the log in and sign up. Also, in the Map page, for the country code search, I would have include a list of options. For the map position, I would have render it again after a new country search with the new position.
 
 # How to start
 
+## install dependencies
+
+npm install
+
+## run project
+
 npm run dev
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

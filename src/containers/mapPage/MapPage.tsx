@@ -12,7 +12,6 @@ function MapPage() {
   const [country, setCountry] = useState('US')
   const [events, setEvents] = useState(jsonData._embedded.events)
   const [error, setError] = useState('')
-  // const [mapPosition, setMapPosition] = useState({lat: 29.9429, lng: -90.082802})
   const [mapPosition, setMapPosition] = useState<null | any>(null)
   const getLocation = (event: any) => {
     const location = event._embedded.venues[0].location
@@ -49,7 +48,7 @@ function MapPage() {
     <div className={styles.base}>
       <div className={styles.countryInput}>
         <FormInput
-          label='country'
+          label='Country code'
           name='country'
           value={country}
           onChange={(event: any) => setCountry(event.target.value)}
